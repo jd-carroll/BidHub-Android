@@ -3,11 +3,14 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.2'
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:3.2.0'
     }
 }
 
@@ -16,24 +19,24 @@ repositories {
 }
 
 dependencies {
-    compile files('libs/bolts-android-1.1.3.jar')
-    compile files('libs/Parse-1.7.1.jar')
-    compile "com.android.support:appcompat-v7:21.0.+"
-    compile 'com.android.support:recyclerview-v7:+'
-    compile 'com.android.support:palette-v7:+'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
-    compile 'com.squareup.okhttp:okhttp:1.5.3'
-    compile 'com.jakewharton:butterknife:4.0.1'
-    compile 'de.greenrobot:eventbus:2.2.0'
-    compile 'com.loopj.android:android-async-http:1.4.6'
-    compile('com.android.support:cardview-v7:23.2.0') {
+    implementation files('libs/bolts-android-1.1.3.jar')
+    implementation files('libs/Parse-1.7.1.jar')
+    implementation "com.android.support:appcompat-v7:21.0.+"
+    implementation 'com.android.support:recyclerview-v7:+'
+    implementation 'com.android.support:palette-v7:+'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.1'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'de.greenrobot:eventbus:2.4.1'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation('com.android.support:cardview-v7:23.2.0') {
         force = true
     }
 }
 
 android {
     compileSdkVersion 21
-    buildToolsVersion = "21.1.0"
+    buildToolsVersion = '27.0.3'
 
     buildTypes {
 
